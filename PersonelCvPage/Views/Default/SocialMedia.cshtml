@@ -1,0 +1,11 @@
+﻿@using PersonelCvPage.Models.Entity
+@model List<SocialMedia>
+
+
+
+<div class="social-icons">
+    @foreach (var item in Model)
+    {
+        <a class="social-icon" href="@item.Link"><i class="@item.Sign"></i></a>
+    }
+</div>

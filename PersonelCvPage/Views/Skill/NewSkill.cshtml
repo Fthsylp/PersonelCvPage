@@ -1,0 +1,28 @@
+﻿@model PersonelCvPage.Models.Entity.Skills
+
+
+@{
+    ViewBag.Title = "NewSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h4 class="mt-5">New Skill Add Page</h4>
+
+    <form method="post" class="mt-4">
+
+        <div class="mb-3">
+            <label for="Skills1" class="form-label">Skill</label>
+            <input type="text" class="form-control" id="Skills" name="Skills1" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Progress" class="form-label">Progress</label>
+            <input type="text" class="form-control" id="Progress" name="Progress" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>

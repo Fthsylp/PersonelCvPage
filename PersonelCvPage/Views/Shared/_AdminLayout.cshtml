@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Project Add</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="/Default/Index" class="brand-link d-flex align-items-center">
+                <i class="fas fa-home fa-2x mr-2"></i> <!-- Replace with your desired icon and adjust size as needed -->
+                <span class="brand-text font-weight-bold">Main Site</span>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <a href="#" class="d-block font-weight-bold">
+                            <i class="fas fa-user-circle fa-2x mr-2"></i>
+                            Admin Page
+                        </a>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item has-treeview">
+                            <a href="/About/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-portrait"></i>
+                                <p>
+                                    About
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Education/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Education
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="@Url.Action("Index", "Experience")" class="nav-link">
+                                <i class="nav-icon fas fa-history"></i>
+                                <p>
+                                    Experience
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Interest/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-paint-brush"></i>
+                                <p>
+                                    Interest
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Skill/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    Skill
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Certification/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-trophy"></i>
+                                <p>
+                                    Certification
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Contact/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-phone"></i>
+                                <p>
+                                    Contact
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/SocialMedia/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-share-alt"></i>
+                                <p>
+                                    Social Media
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-user-lock"></i>
+                                <p>
+                                    Admin User Control
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Login/LogOut/" class="nav-link">
+                                <i class="nav-icon fas fa-door-open"></i>
+                                <p>
+                                    Log Out
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="content-wrapper">
+            <section class="content">
+                    @RenderBody()
+            </section>
+        </div>
+    </div>
+    <script src="/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <script src="/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+    <script src="/AdminLTE-3.0.4/dist/js/demo.js"></script>
+</body>
+</html>

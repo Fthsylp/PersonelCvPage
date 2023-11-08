@@ -1,0 +1,31 @@
+﻿@model PersonelCvPage.Models.Entity.Certification
+
+@{
+    ViewBag.Title = "AddCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 class="text-center">New Certificate Add Page</h2>
+<br />
+
+<div class="container">
+    <form method="post" class="mt-4">
+        <div class="mb-5">
+            @Html.Label("Title")
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
+        </div>
+
+
+        <div class="mb-3">
+            @Html.Label("Date")
+            @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        </div>
+
+        <div class="mb-1">
+
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>

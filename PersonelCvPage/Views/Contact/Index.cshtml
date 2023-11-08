@@ -1,0 +1,50 @@
+﻿@using PersonelCvPage.Models.Entity
+@model List<Comunication>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2 class="text-center"> Contact Page</h2>
+<br />
+
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var item in Model)
+                                    {
+                                        <div class="time-label">
+                                            <span class="bg-warning">
+                                                @(((DateTime)item.Date).ToString("dd-MMM-yyyy"))
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-comments bg-warning"></i>
+                                            <div class="timeline-item">
+                                                <h3 class="timeline-header"><a href="#">@item.NameSurname</a> sent you a message! || Subject : @item.Subject</h3>
+                                                <div class="timeline-body">
+                                                    @item.Message
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="#" class="btn btn-warning btn-flat btn-sm">@item.Mail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

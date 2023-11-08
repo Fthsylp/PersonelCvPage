@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h4 class="mt-5">New Experience Page</h4>
+
+    <form method="post" class="mt-4">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="SubTitle" class="form-label">Subtitle</label>
+            <input type="text" class="form-control" id="SubTitle" name="SubTitle" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea type="text" class="form-control" id="Description" name="Description" required> </textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="Date" class="form-label">Date</label>
+            <input type="text" class="form-control" id="Date" name="Date" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>

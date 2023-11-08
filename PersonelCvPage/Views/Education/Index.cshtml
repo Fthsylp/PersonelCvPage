@@ -1,0 +1,45 @@
+﻿@using PersonelCvPage.Models.Entity
+@model List<Education>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 class="text-center">Education List</h2>
+<br />
+
+
+@if (Model.Count == 0)
+{
+    <p>No experiences to display.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>SubTitle</th>
+            <th>SubTitle2</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Title</td>
+                <td>@item.SubTitle1</td>
+                <td>@item.SubTitle2</td>
+                <td>@item.GNO</td>
+                <td>@item.Date</td>
+                <td><a href="/Education/DeleteEducation/@item.ID" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</a></td>
+                <td><a href="/Education/UpdateEducation/@item.ID" class="btn btn-info"><i class="fas fa-pencil-alt"></i>Update</a></td>
+            </tr>
+        }
+    </table>
+}
+
+<a href="/Education/AddEducation/" class="btn btn-dark">New Education</a>

@@ -1,0 +1,43 @@
+﻿@model PersonelCvPage.Models.Entity.Education
+
+
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<div class="container">
+    <h2 class="text-center">Update Education Page</h2>
+
+    <form method="post" class="mt-4">
+        <div class="mb-3">
+            @Html.Label("Title")
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Sub Title")
+            @Html.TextBoxFor(x => x.SubTitle1, new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Sub Title 2")
+            @Html.TextBoxFor(x => x.SubTitle2, new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Date")
+            @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.Label("GNO")
+            @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:red" })
+        </div>
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+

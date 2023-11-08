@@ -1,0 +1,44 @@
+﻿@model PersonelCvPage.Models.Entity.Experience
+
+
+@{
+    ViewBag.Title = "ShowExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <br />
+    <h2 class="text-center">Edit Experience Page</h2>
+
+    <form class="mt-4" method="post">
+        <div class="mb-3">
+            <label for="ID" class="form-label">Id</label>
+            <input type="text" class="form-control" id="ID" name="ID" value="@Model.ID">
+        </div>
+
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="SubTitle" class="form-label">Subtitle</label>
+            <input type="text" class="form-control" id="SubTitle" name="SubTitle" value="@Model.SubTitle" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea type="text" class="form-control" id="Description" name="Description" required> @Model.Description</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="Date" class="form-label">Date</label>
+            <input type="text" class="form-control" id="Date" name="Date" value="@Model.Date" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+</div>
+
+
